@@ -39,4 +39,3 @@ if st.button("Predict Survival"):
     label = "Will Survive ✅" if pred == 1 else "Will Not Survive ❌"
 
     st.subheader(label)
-```
