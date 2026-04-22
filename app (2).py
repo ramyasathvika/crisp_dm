@@ -1,13 +1,12 @@
 import os
-import pickle
+import joblib
 import pandas as pd
 import streamlit as st
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "model.pkl")
 
-with open(MODEL_PATH, "rb") as f:
-    model = pickle.load(f)
+model = joblib.load(MODEL_PATH)
 
 st.title("Titanic Survival Predictor")
 st.write("Enter passenger details:")
